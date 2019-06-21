@@ -1,0 +1,26 @@
+/*-----------------------------------------------------
+TAB BAR
+-----------------------------------------------------*/
+/*--Tab Bar--*/
+
+.tab__bar {
+    height: 48px;
+    width : 100%;
+}
+
+.tab__bar_group {
+    padding-left: 52px;
+    overflow-x  : auto;
+    overflow-y  : hidden;
+    white-space : nowrap;
+}
+
+.tab__bar_group .tab__bar_item {
+    display: inline-block;
+    height : 48px;
+    padding: 0 16px;
+}
+
+.tab__bar_group .tab__bar_item.actived {
+    border-bottom: solid 4px $color__theme;;
+}

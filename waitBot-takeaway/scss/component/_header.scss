@@ -1,0 +1,17 @@
+/*-----------------------------------------------------
+HEADER
+-----------------------------------------------------*/
+
+/*--Top Bar--*/
+.top-bar {
+    @extend %icon-with-text__group;
+    padding: 16px;
+}
+
+.top-bar i {
+    @extend %icon-with-text__item_left;
+}
+
+.top-bar__main {
+    @extend %icon-with-text__item_main;
+}

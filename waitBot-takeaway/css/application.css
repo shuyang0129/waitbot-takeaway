@@ -1,0 +1,722 @@
+@charset "UTF-8";
+/*-----------------------------------------------------
+FLEXBOX - FLEX CONTAINER
+-----------------------------------------------------*/
+/*--Display--*/
+.button_contained, .add-to-cart, .remove-from-cart, .btn__container button, .counter__button, .search__bar, .snackbar__container, .btn__container button div, .counter__group, .snackbar, .counter__group_container {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  display: flex;
+}
+
+/*--Flex direction--*/
+/*--Flex wrap--*/
+/*--Justify content--*/
+.button_contained, .add-to-cart, .remove-from-cart, .btn__container button, .counter__button, .snackbar, .counter__group_container {
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+
+/*--Align items--*/
+.button_contained, .add-to-cart, .remove-from-cart, .btn__container button, .counter__button, .search__bar, .snackbar__container, .btn__container button div, .counter__group {
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+/*--Align content--*/
+/*-----------------------------------------------------
+FLEXBOX - FLEX ITEMS
+-----------------------------------------------------*/
+/*--Align self--*/
+/*-----------------------------------------------------
+FONT WEIGHT
+-----------------------------------------------------*/
+/*-----------------------------------------------------
+FONT SIZE
+-----------------------------------------------------*/
+/*-----------------------------------------------------
+CURSOR PROPERTY
+-----------------------------------------------------*/
+.btn, .button_contained, .add-to-cart, .remove-from-cart, .tab__bar .tab__bar_item, .search__bar_button, .snackbar__btn, .menu__item, .restaurant__item_group, .order-customize__item, .checkboxContainer, .radioContainer, .shopping-cart__item {
+  cursor: pointer;
+}
+
+/*-----------------------------------------------------
+FULL WIDTH
+-----------------------------------------------------*/
+/*-----------------------------------------------------
+TEXT FORMATTING
+-----------------------------------------------------*/
+/*-----------------------------------------------------
+TYPOGRAPHY
+-----------------------------------------------------*/
+/*-----------------------------------------------------
+ICON WITH TEXT
+-----------------------------------------------------*/
+/*--Icon With Text | Two Columns--*/
+.top-bar, .menu__item, .restaurant__item_group, .shopping-cart__item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 14px 0;
+}
+
+.top-bar i {
+  margin-right: 16px;
+}
+
+.top-bar__main, .menu__item_main, .restaurant__item_main, .shopping-cart__item_main {
+  flex-grow: 1;
+}
+
+.menu__item_value, .restaurant__item_action, .shopping-cart__item_value, .shopping-cart__item_action {
+  text-align: right;
+  margin-left: 16px;
+  min-width: 80px;
+}
+
+/*-----------------------------------------------------
+UNDERLINE
+-----------------------------------------------------*/
+/*--Underline--*/
+.menu__item, .restaurant__item_group, .order-customize__item, .order__memo, .shopping-cart__item {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.12);
+}
+
+/*-----------------------------------------------------
+BASIC
+-----------------------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'NotoSans', sans-serif, 'NotoSansCJK', '微軟正黑體', 'Microsoft JhengHei';
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  max-width: 516px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 64px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+button, input[type="submit"], input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+/*-----------------------------------------------------
+BASIC
+-----------------------------------------------------*/
+/*--Basic--*/
+.body, .radio__label, .checkbox__label, .search__bar_input, .order__memo, .menu__item, .restaurant__item_group, .shopping-cart__item, .shopping-cart__item_title, .snackbar__title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0.25px;
+  line-height: 20px;
+}
+
+.title, .top-bar__title {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.15px;
+}
+
+.subtitle, .order-customize__section_title, .menu__section_title, .shopping-cart__section_title {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.54);
+  letter-spacing: 0.1px;
+  line-height: 20px;
+}
+
+.caption, .top-bar__subtitle, .menu__item_description, .restaurant__item_description, .shopping-cart__item_description, .item__description {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.54);
+  letter-spacing: 0.4px;
+  line-height: 20px;
+}
+
+/*-----------------------------------------------------
+BUTTON
+-----------------------------------------------------*/
+/*--Button Default--*/
+.btn, .button_contained, .add-to-cart, .remove-from-cart, .tab__bar .tab__bar_item, .search__bar_button, .snackbar__btn {
+  font-size: 14px;
+  letter-spacing: 1.25px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/*--Contained Button--*/
+/*--Radio Button Label--*/
+.radio__label {
+  padding: 14px 0;
+  flex-grow: 1;
+}
+
+/*--Checkbox Button Label--*/
+.checkbox__label {
+  padding: 14px 0;
+  flex-grow: 1;
+}
+
+/*-----------------------------------------------------
+HEADER
+-----------------------------------------------------*/
+/*--Top Bar--*/
+.top-bar__title {
+  line-height: 28px;
+}
+
+/*-----------------------------------------------------
+TAB BAR
+-----------------------------------------------------*/
+/*--Tab bar--*/
+.tab__bar .tab__bar_item {
+  color: rgba(0, 0, 0, 0.38);
+  line-height: 48px;
+  text-align: center;
+  text-decoration: none;
+}
+.tab__bar .tab__bar_item.actived {
+  color: #78909C;
+}
+
+/*-----------------------------------------------------
+SEARCH BAR
+-----------------------------------------------------*/
+/*--Search Bar Input--*/
+.search__bar_input {
+  line-height: 36px;
+}
+
+/*--Search Bar Button--*/
+.search__bar_button {
+  text-align: center;
+  text-decoration: none;
+  line-height: 36px;
+  color: white;
+}
+
+/*-----------------------------------------------------
+ORDER CUSTOMIZE
+-----------------------------------------------------*/
+/*--Order Customize--*/
+.order-customize__section_title {
+  color: #78909C;
+  text-align: left;
+}
+
+/*-----------------------------------------------------
+TEXT INPUT
+-----------------------------------------------------*/
+/*--Textarea | Note--*/
+.order__memo {
+  overflow: visible;
+}
+
+/*-----------------------------------------------------
+MENU
+-----------------------------------------------------*/
+/*--Menu--*/
+.menu__section_title {
+  color: #78909C;
+}
+
+/*-----------------------------------------------------
+RESTAURANT LIST
+-----------------------------------------------------*/
+/*--Restaurant List--*/
+/*-----------------------------------------------------
+SHOPPING CART
+-----------------------------------------------------*/
+/*--Shopping Cart--*/
+.shopping-cart__section_title {
+  color: #78909C;
+  text-align: left;
+}
+
+.shopping-cart__item_title.sub {
+  opacity: .54;
+}
+
+/*-----------------------------------------------------
+SNACKBAR
+-----------------------------------------------------*/
+/*--Snackbar--*/
+.snackbar__title {
+  color: #FFFFFF;
+}
+
+.snackbar__btn {
+  color: #DFF0D8;
+}
+
+/*-----------------------------------------------------
+HEADER
+-----------------------------------------------------*/
+/*--Top Bar--*/
+.top-bar {
+  padding: 16px;
+}
+
+/*-----------------------------------------------------
+TAB BAR
+-----------------------------------------------------*/
+/*--Tab Bar--*/
+.tab__bar {
+  height: 48px;
+  width: 100%;
+}
+
+.tab__bar_group {
+  padding-left: 52px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.tab__bar_group .tab__bar_item {
+  display: inline-block;
+  height: 48px;
+  padding: 0 16px;
+}
+
+.tab__bar_group .tab__bar_item.actived {
+  border-bottom: solid 4px #78909C;
+}
+
+/*-----------------------------------------------------
+SEARCH BAR
+-----------------------------------------------------*/
+/*--Search Bar--*/
+.search__bar {
+  padding: 0 16px 16px;
+}
+
+/*--Search Bar Input--*/
+.search__bar_input {
+  display: block;
+  height: 36px;
+  max-width: 500px;
+  flex-grow: 1;
+  border: solid 1px rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+  padding: 0 16px;
+}
+
+/*--Search Bar Button--*/
+.search__bar_button {
+  display: inline-block;
+  border: none;
+  background-color: #78909C;
+  height: 36px;
+  border-radius: 2px;
+  margin-left: 16px;
+  padding: 0 16px;
+}
+
+/*-----------------------------------------------------
+SNACKBAR
+-----------------------------------------------------*/
+/*--Snackbar--*/
+.snackbar {
+  width: 100%;
+  position: fixed;
+  bottom: 8px;
+  z-index: 4;
+  line-height: 48px;
+  height: 48px;
+}
+
+.snackbar__container {
+  justify-content: space-between;
+  width: 100%;
+  max-width: 448px;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #4A4A4A;
+  border-radius: 2px;
+}
+
+/*-----------------------------------------------------
+MENU
+-----------------------------------------------------*/
+/*--Menu--*/
+.menu {
+  margin-top: 129px;
+}
+
+.menu__section {
+  margin-top: 14px;
+}
+
+.menu__section_title {
+  padding: 18px 0;
+}
+
+.menu__item.soldout {
+  pointer-events: none;
+}
+.menu__item.soldout .menu__item_title,
+.menu__item.soldout .menu__item_description,
+.menu__item.soldout .menu__item_value {
+  opacity: 0.38;
+}
+.menu__item.soldout .menu__item_title::after {
+  content: " (已售完)";
+}
+
+/*-----------------------------------------------------
+RESTAURANT LIST
+-----------------------------------------------------*/
+/*--Restaurant List--*/
+.search {
+  margin-top: 113px;
+}
+
+.restaurant__item_group {
+  position: relative;
+}
+
+.restaurant__item_description {
+  margin-top: 8px;
+}
+
+.restaurant__item_action {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.action__menu {
+  display: none;
+  position: absolute;
+  max-width: 112px;
+  padding: 8px 0px;
+  right: 0;
+  top: 12px;
+  background-color: #FFFFFF;
+  border: solid 1px rgba(0, 0, 0, 0.12);
+  z-index: 3;
+  border-radius: 2px;
+}
+
+.action__menu_item {
+  width: 100%;
+  height: 48px;
+  overflow: hidden;
+  padding: 0px 16px;
+  cursor: pointer;
+  transition: background-color .2s ease-in;
+}
+.action__menu_item:hover {
+  background-color: #FAFAFA;
+}
+
+/*-----------------------------------------------------
+MY FAVORITE
+-----------------------------------------------------*/
+/*--My Favorite--*/
+.my-favorite {
+  margin-top: 60px;
+}
+
+/*-----------------------------------------------------
+ORDER CUSTOMIZE
+-----------------------------------------------------*/
+/*--Order Customize--*/
+.order-customize {
+  margin-top: 60px;
+  padding-bottom: 16px;
+}
+
+.order-customize__section {
+  margin-top: 14px;
+}
+
+.order-customize__section_title {
+  padding: 18px 0;
+}
+
+.order-customize__item {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+}
+
+.order-customize__item.disabled {
+  pointer-events: none;
+}
+.order-customize__item.disabled label {
+  opacity: 0.38;
+}
+
+/*-----------------------------------------------------
+TEXT INPUT
+-----------------------------------------------------*/
+/*--Textarea | Note--*/
+.order__memo {
+  width: 100%;
+  padding: 14px 0;
+  resize: none;
+}
+
+/*-----------------------------------------------------
+BUTTON
+-----------------------------------------------------*/
+/*--Contained Button--*/
+.btn__container button:nth-child(n + 1) {
+  margin-top: 16px;
+}
+
+.button_contained, .add-to-cart, .remove-from-cart {
+  width: 100%;
+  height: 48px;
+  color: white;
+  border-radius: 2px;
+}
+
+.add-to-cart {
+  background-color: #78909C;
+}
+
+.remove-from-cart {
+  background-color: #EF5350;
+}
+
+.btn__container i {
+  margin-right: 16px;
+}
+
+/*-----------------------------------------------------
+CHECKBOX BUTTON
+-----------------------------------------------------*/
+/*--Checkbox Button--*/
+.checkboxContainer {
+  display: block;
+  position: relative;
+  user-select: none;
+  margin-right: 16px;
+  margin-top: 16px;
+}
+
+.checkboxContainer input {
+  display: none;
+}
+
+.checkboxContainer .tick {
+  display: block;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  border-radius: 2px;
+  border: 2px solid #4A4A4A;
+  transition: all 250ms ease;
+}
+
+.checkboxContainer:hover .tick {
+  background-color: #E0E0E0;
+}
+
+.checkboxContainer input + .tick::after {
+  /*Add another block-level blank space*/
+  content: '';
+  display: block;
+  /*Make it a small rectangle so the border will create an L-shape*/
+  width: 3px;
+  height: 6px;
+  /*Add a white border on the bottom and left, creating that 'L' */
+  border: solid #FFFFFF;
+  border-width: 0 2px 2px 0;
+  /*Rotate the L 45 degrees to turn it into a checkmark*/
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+  transform: translate(-50%, -60%) rotate(45deg);
+  transition: all 250ms ease;
+}
+
+.checkboxContainer input:checked + .tick::after {
+  opacity: 1;
+}
+
+.checkboxContainer input:checked + .tick {
+  background-color: #4A4A4A;
+}
+
+/*-----------------------------------------------------
+RADIO BUTTON
+-----------------------------------------------------*/
+/*--Radio Button--*/
+.radioContainer {
+  display: block;
+  position: relative;
+  user-select: none;
+  margin-right: 16px;
+  margin-top: 16px;
+}
+
+.radioContainer input {
+  display: none;
+}
+
+.radioContainer .circle {
+  display: block;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  border-radius: 50%;
+  border: 2px solid #4A4A4A;
+  transition: all 250ms ease;
+}
+
+.radioContainer:hover .circle {
+  background-color: #E0E0E0;
+}
+
+.radioContainer input + .circle::after {
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #4A4A4A;
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 250ms ease;
+}
+
+.radioContainer input:checked + .circle::after {
+  opacity: 1;
+}
+
+/*-----------------------------------------------------
+COUNTER BUTTON
+-----------------------------------------------------*/
+/*--Counter Button--*/
+.counter__group_container {
+  margin: 32px auto;
+}
+
+.counter__button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: solid 1px rgba(0, 0, 0, 0.87);
+  font-size: 30px;
+}
+
+.counter_result {
+  margin: 0 16px;
+  width: 100px;
+  text-align: center;
+}
+
+/*-----------------------------------------------------
+SHOPPING CART
+-----------------------------------------------------*/
+/*--Shopping Cart--*/
+.shopping-cart {
+  margin-top: 60px;
+  padding-bottom: 16px;
+}
+
+.shopping-cart__section {
+  margin-top: 14px;
+}
+
+.shopping-cart__section_title {
+  padding: 18px 0;
+}
+
+.shopping-cart__item.sub {
+  border-style: dotted;
+}
+
+.shopping-cart__item.soldout {
+  pointer-events: none;
+}
+.shopping-cart__item.soldout .item__title,
+.shopping-cart__item.soldout .item__description,
+.shopping-cart__item.soldout .shopping-cart__item_value {
+  opacity: 0.38;
+}
+.shopping-cart__item.soldout .item__title::after {
+  content: " (已售完)";
+}
+
+.shopping-cart__item_value.sub {
+  opacity: .54;
+}
+
+.shopping-cart__item_action {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+/*-----------------------------------------------------
+BASIC CONTAINER
+-----------------------------------------------------*/
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*-----------------------------------------------------
+STICK
+-----------------------------------------------------*/
+/*--Stick Top--*/
+.stick_top {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  background-color: #FFF;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.12);
+}
+
+/*-----------------------------------------------------
+CENTER
+-----------------------------------------------------*/
+
+/*# sourceMappingURL=application.css.map */

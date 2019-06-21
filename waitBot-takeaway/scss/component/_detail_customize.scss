@@ -1,0 +1,46 @@
+/*-----------------------------------------------------
+ORDER CUSTOMIZE
+-----------------------------------------------------*/
+/*--Order Customize--*/
+.order-customize {
+    margin-top      : 60px;
+    padding-bottom  : 16px;
+}
+
+.order-customize__section {
+    margin-top      : 14px;
+}
+
+.order-customize__section_title {
+    padding     : 18px 0;
+}
+
+.order-customize__item {
+    @extend %line_bottom;
+    @extend %cursor__pointer;
+    display         : flex;
+    flex-flow       : row nowrap;
+    width           : 100%;
+}
+
+.order-customize__item.disabled {
+    pointer-events: none;
+
+    label {
+        opacity: 0.38;
+    }
+}
+
+
+/*-----------------------------------------------------
+TEXT INPUT
+-----------------------------------------------------*/
+/*--Textarea | Note--*/
+.order__memo {
+    @extend %line_bottom;
+    width   : 100%;
+    padding : 14px 0;
+    resize  : none;
+}
+
+

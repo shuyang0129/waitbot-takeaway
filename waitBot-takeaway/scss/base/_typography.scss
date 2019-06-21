@@ -1,0 +1,227 @@
+/*-----------------------------------------------------
+BASIC
+-----------------------------------------------------*/
+
+/*--Basic--*/
+.body {
+    font-size     : 14px;
+    font-weight   : 400;
+    color         : #000000;
+    letter-spacing: 0.25px;
+    line-height   : 20px;
+}
+
+.title {
+    font-size     : 18px;
+    font-weight   : 700;
+    letter-spacing: 0.15px;
+}
+
+.subtitle {
+    font-size     : 14px;
+    font-weight   : 700;
+    color         : rgba(0, 0, 0, 0.54);
+    letter-spacing: 0.1px;
+    line-height   : 20px;
+}
+
+.caption {
+    font-size     : 12px;
+    font-weight   : 500;
+    color         : rgba(0, 0, 0, 0.54);
+    letter-spacing: 0.4px;
+    line-height   : 20px;
+}
+
+
+
+/*-----------------------------------------------------
+BUTTON
+-----------------------------------------------------*/
+/*--Button Default--*/
+.btn {
+    @extend %cursor__pointer;
+    font-size     : 14px;
+    letter-spacing: 1.25px;
+    font-weight   : 700;
+    text-transform: uppercase;
+}
+
+/*--Contained Button--*/
+.button_contained {
+    @extend .btn;
+}
+
+/*--Radio Button Label--*/
+.radio__label {
+    @extend .body;
+    padding  : 14px 0;
+    flex-grow: 1;
+}
+
+/*--Checkbox Button Label--*/
+.checkbox__label {
+    @extend .body;
+    padding  : 14px 0;
+    flex-grow: 1;
+}
+
+
+
+/*-----------------------------------------------------
+HEADER
+-----------------------------------------------------*/
+/*--Top Bar--*/
+.top-bar__title {
+    @extend .title;
+    line-height: 28px;
+}
+
+.top-bar__subtitle {
+    @extend .caption;
+}
+
+
+
+/*-----------------------------------------------------
+TAB BAR
+-----------------------------------------------------*/
+/*--Tab bar--*/
+.tab__bar {
+
+    .tab__bar_item {
+        @extend .btn;
+        color          : rgba(0, 0, 0, 0.38);
+        line-height    : 48px;
+        text-align     : center;
+        text-decoration: none;
+    }
+
+    .tab__bar_item.actived {
+        color          : $color__theme;;
+    }
+    
+}
+
+
+
+/*-----------------------------------------------------
+SEARCH BAR
+-----------------------------------------------------*/
+/*--Search Bar Input--*/
+.search__bar_input {
+    @extend .body;
+    line-height    : 36px;
+}
+
+/*--Search Bar Button--*/
+.search__bar_button {
+    @extend .btn;
+    text-align     : center;
+    text-decoration: none;
+    line-height    : 36px;
+    color          : white;
+}
+
+
+
+/*-----------------------------------------------------
+ORDER CUSTOMIZE
+-----------------------------------------------------*/
+/*--Order Customize--*/
+.order-customize__section_title {
+    @extend .subtitle;
+    color       : $color__theme;
+    text-align  : left;
+}
+
+
+
+/*-----------------------------------------------------
+TEXT INPUT
+-----------------------------------------------------*/
+/*--Textarea | Note--*/
+.order__memo {
+    @extend .body;
+    overflow: visible;
+}
+
+
+
+/*-----------------------------------------------------
+MENU
+-----------------------------------------------------*/
+/*--Menu--*/
+.menu__section_title {
+    @extend .subtitle;
+    color       : $color__theme;
+}
+
+.menu__item {
+    @extend .body;
+}
+
+.menu__item_description {
+    @extend .caption;
+}
+
+
+
+/*-----------------------------------------------------
+RESTAURANT LIST
+-----------------------------------------------------*/
+/*--Restaurant List--*/
+.restaurant__item_group {
+    @extend .body;
+}
+
+.restaurant__item_description {
+    @extend .caption;
+}
+
+
+
+/*-----------------------------------------------------
+SHOPPING CART
+-----------------------------------------------------*/
+/*--Shopping Cart--*/
+.shopping-cart__section_title {
+    @extend .subtitle;
+    color       : $color__theme;
+    text-align  : left;
+}
+
+.shopping-cart__item_description {
+    @extend .caption;
+}
+
+.shopping-cart__item {
+    @extend .body;
+}
+
+.shopping-cart__item_title {
+    @extend .body;
+    &.sub {
+        opacity: .54;
+    }
+}
+
+.item__description {
+    @extend .caption;
+}
+
+
+
+/*-----------------------------------------------------
+SNACKBAR
+-----------------------------------------------------*/
+/*--Snackbar--*/
+.snackbar__title {
+    @extend .body;
+    color: $color__snack_title;
+}
+
+.snackbar__btn {
+    @extend .btn;
+    color: $color__snack_button;
+}

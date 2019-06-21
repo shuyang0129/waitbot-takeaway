@@ -1,0 +1,88 @@
+////////////////////////////////////////////////////
+// VENDOR PREFIX
+////////////////////////////////////////////////////
+
+@mixin prefix($property, $value, $vendors: webkit moz ms o) {
+    @if $vendors {
+      @each $vendor in $vendors {
+        #{"-" + $vendor + "-" + $property}: #{$value};
+      }
+    }
+    #{$property}: #{$value};
+}
+
+
+
+////////////////////////////////////////////////////
+// FONT WEIGHT
+////////////////////////////////////////////////////
+
+@mixin font__weight($weight) {
+	@extend %font__weight_#{$weight};
+}
+
+
+
+////////////////////////////////////////////////////
+// FONT SIZE
+////////////////////////////////////////////////////
+
+@mixin font__size($level) {
+	@extend %font__size_#{$level};
+}
+
+////////////////////////////////////////////////////
+// INPUT PLACEHOLDER
+////////////////////////////////////////////////////
+
+@mixin placeholder {
+    &::placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+
+
+////////////////////////////////////////////////////
+// BREAKPOINTS
+////////////////////////////////////////////////////
+
+// @mixin breakpoint($point) {
+//   @if $point == windows_m {
+//     @media (min-width: map-get($breakpoint, $point)) { @content; }
+//   }
+ 
+//   @else if $point == windows_l {
+//     @media (min-width: map-get($breakpoint, $point)) { @content; }
+//   }
+ 
+//   @else {
+//     @warn "Breakpoint mixin supports: windows_m, windows_l";
+//   }
+// }
+
+@mixin breakpoint($point) {
+  @media (min-width: $point) { @content; }
+}
+
+
+
+////////////////////////////////////////////////////
+// FLUID GRID
+////////////////////////////////////////////////////
+
+@mixin fluid-grid($column, $gutter: 16px) {
+	$percent: 100% / $column;
+	$numerator: $column - 1;
+	width: calc( #{$percent} - (#{$gutter} * #{$numerator} / #{$column}));
+	margin-bottom: #{$gutter};
+	@if $column > 1 {
+		&:nth-child(n) {
+			margin-left: #{$gutter};
+		}
+		&:nth-child(#{$column}n+1) {
+			margin-left: 0;
+		}
+	}
+}

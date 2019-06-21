@@ -1,0 +1,19 @@
+/*-----------------------------------------------------
+CENTER
+-----------------------------------------------------*/
+
+%center_center {
+	@extend %disp_flex;
+	@extend %justify-content_center;
+	@extend %align-items_center;
+}
+
+%center_vertical {
+	@extend %disp_flex;
+	@extend %align-items_center;
+}
+
+%center_horizontal {
+	@extend %disp_flex;
+	@extend %justify-content_center;
+}

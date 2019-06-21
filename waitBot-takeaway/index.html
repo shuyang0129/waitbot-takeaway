@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- title -->
+	<title>WaitBot</title>
+	<!-- font embeb -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300i,700" rel="stylesheet">
+	<!-- material icon -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/form-reset.css">
+	<link rel="stylesheet" type="text/css" href="css/application.css">
+</head>
+
+<body>
+	<div class="stick_top">
+		<header class="top-bar">
+			<!-- <div class="icon-with-title"> -->
+			<i class="material-icons">close</i>
+			<div class="top-bar__main">
+				<h1 class="top-bar__title">美國佬雙蛋早餐</h1>
+			</div>
+			<!-- </div> -->
+		</header>
+	</div>
+	<main class="order-customize">
+		<section class="order-customize__section">
+			<h3 class="order-customize__section_title">選擇蛋的種類</h3>
+			<div class="order-customize__item">
+				<label for="radio-1" class="radioContainer">
+					<input type="radio" name="egg" id="radio-1">
+					<span class="circle"></span>
+				</label>
+				<label class="radio__label" for="radio-1">炒蛋</label>
+			</div>
+			<div class="order-customize__item">
+				<label for="radio-2" class="radioContainer">
+					<input type="radio" name="egg" id="radio-2">
+					<span class="circle"></span>
+				</label>
+				<label class="radio__label" for="radio-2">太陽蛋</label>
+			</div>
+			<div class="order-customize__item">
+				<label for="radio-3" class="radioContainer">
+					<input type="radio" name="egg" id="radio-3">
+					<span class="circle"></span>
+				</label>
+				<label class="radio__label" for="radio-3">荷包蛋</label>
+			</div>
+		</section>
+		<section class="order-customize__section">
+			<h3 class="order-customize__section_title">選擇吐司的種類</h3>
+			<div class="order-customize__item">
+				<label for="radio-4" class="radioContainer">
+					<input type="radio" name="toast" id="radio-4">
+					<span class="circle"></span>
+				</label>
+				<label class="radio__label" for="radio-4">白吐司</label>
+			</div>
+			<div class="order-customize__item">
+				<label for="radio-5" class="radioContainer">
+					<input type="radio" name="toast" id="radio-5">
+					<span class="circle"></span>
+				</label>
+				<label class="radio__label" for="radio-5">全麥吐司</label>
+			</div>
+			<div class="order-customize__item">
+				<label for="radio-6" class="radioContainer">
+					<input type="radio" name="toast" id="radio-6">
+					<span class="circle"></span>
+				</label>
+				<label class="radio__label" for="radio-6">亞麻仁籽吐司</label>
+			</div>
+			<div class="order-customize__item disabled">
+				<label for="radio-7" class="radioContainer">
+					<input type="radio" name="egg" id="radio-7">
+					<span class="circle"></span>
+				</label>
+				<label class="radio__label" for="radio-7">法國進口傳統家庭手工蒜味明太子魔法杖(每店每天限量50隻)</label>
+			</div>
+		</section>
+		<section class="order-customize__section">
+			<h3 class="order-customize__section_title">選擇早餐肉種類(擇二)</h3>
+			<div class="order-customize__item">
+				<label for="radio-8" class="checkboxContainer">
+					<input type="checkbox" name="meat" id="radio-8">
+					<span class="tick"></span>
+				</label>
+				<label class="checkbox__label" for="radio-8">培根</label>
+			</div>
+			<div class="order-customize__item">
+				<label for="radio-9" class="checkboxContainer">
+					<input type="checkbox" name="meat" id="radio-9">
+					<span class="tick"></span>
+				</label>
+				<label class="checkbox__label" for="radio-9">火腿</label>
+			</div>
+			<div class="order-customize__item">
+				<label for="radio-10" class="checkboxContainer">
+					<input type="checkbox" name="meat" id="radio-10">
+					<span class="tick"></span>
+				</label>
+				<label class="checkbox__label" for="radio-10">早餐香腸</label>
+			</div>
+			<div class="order-customize__item">
+				<label for="radio-11" class="checkboxContainer">
+					<input type="checkbox" name="meat" id="radio-11">
+					<span class="tick"></span>
+				</label>
+				<label class="checkbox__label" for="radio-11">杏鮑菇</label>
+			</div>
+			<div class="order-customize__item disabled">
+				<label for="radio-12" class="checkboxContainer">
+					<input type="checkbox" name="meat" id="radio-12">
+					<span class="tick"></span>
+				</label>
+				<label class="checkbox__label" for="radio-12">日本進口霹靂無敵貴鬆鬆高級松阪豬肉片(每日供貨依當天而定)</label>
+			</div>
+		</section>
+		<section class="order-customize__section">
+			<h3 class="order-customize__section_title">備註(留言給廚房人員)</h3>
+			<textarea rows="1" class="order__memo" placeholder="新增註記"></textarea>
+		</section>
+		<div class="counter__group_container">
+			<div class="counter__group">
+				<button class="counter__button">
+					<i class="material-icons">remove</i>
+				</button>
+				<p class="counter_result body">0</p>
+				<button class="counter__button">
+					<i class="material-icons">add</i>
+				</button>
+			</div>
+		</div>
+		<div class="container btn__container">
+			<button class="add-to-cart">
+				<div>
+					<i class="material-icons">add_shopping_cart</i>
+					<p>更新購物車</p>
+				</div>
+			</button>
+			<button class="remove-from-cart">
+				<div>
+					<i class="material-icons">delete</i>
+					<p>從購物車中移除</p>
+				</div>
+			</button>
+		</div>
+	</main>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+/*-----------------------------------------------------
+SHOPPING CART
+-----------------------------------------------------*/
+/*--Shopping Cart--*/
+.shopping-cart {
+    margin-top      : 60px;
+    padding-bottom  : 16px;
+}
+
+.shopping-cart__section {
+    margin-top: 14px;
+}
+
+.shopping-cart__section_title {
+    padding: 18px 0;
+}
+
+.shopping-cart__item {
+    @extend %icon-with-text__group;
+    @extend %cursor__pointer;
+    @extend %line_bottom;
+
+    &.sub {
+        border-style: dotted;
+    }
+}
+
+.shopping-cart__item.soldout {
+    pointer-events: none;
+
+    .item__title,
+    .item__description,
+    .shopping-cart__item_value {
+        opacity: 0.38;
+    }
+
+    .item__title::after {
+        content: " (已售完)";
+    }
+}
+
+.shopping-cart__item_main {
+    @extend %icon-with-text__item_main;
+}
+
+.shopping-cart__item_value {
+    @extend %icon-with-text__item_right;
+
+    &.sub {
+        opacity: .54;
+    }
+}
+
+.shopping-cart__item_action {
+    @extend %icon-with-text__item_right;
+    color: $color__icon_default;
+}

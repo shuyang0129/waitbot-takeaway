@@ -1,0 +1,105 @@
+/*-----------------------------------------------------
+FONT WEIGHT
+-----------------------------------------------------*/
+
+@each $weight, $val in $font__weight {
+	%font__weight_#{$weight} {
+		font-weight: $val;
+	}
+}
+
+
+
+/*-----------------------------------------------------
+FONT SIZE
+-----------------------------------------------------*/
+
+@each $level, $val in $font__size {
+	%font__size_#{$level} {
+		font-size: $val;
+	}
+}
+
+
+
+/*-----------------------------------------------------
+CURSOR PROPERTY
+-----------------------------------------------------*/
+
+%cursor__pointer {
+	cursor: pointer;
+}
+
+
+
+/*-----------------------------------------------------
+FULL WIDTH
+-----------------------------------------------------*/
+%width_full {
+	width: 100%;
+}
+
+
+
+/*-----------------------------------------------------
+TEXT FORMATTING
+-----------------------------------------------------*/
+
+//Text overflow | single line
+%text__overflow_single-line {
+	overflow      : hidden;
+	white-space   : nowrap;
+	text-overflow : ellipsis;
+}
+
+
+
+/*-----------------------------------------------------
+TYPOGRAPHY
+-----------------------------------------------------*/
+
+%text__transform__uppercase {
+    text-transform  : uppercase;
+}
+
+%font_heading {
+    font-weight     : 600;
+    font-size       : 14px;
+    letter-spacing  : 1px;
+    line-height     : 28px;
+    color           : rgba($color: #000000, $alpha: 0.87);
+}
+
+
+
+/*-----------------------------------------------------
+ICON WITH TEXT
+-----------------------------------------------------*/
+/*--Icon With Text | Two Columns--*/
+%icon-with-text__group {
+    display         : flex;
+    flex-flow       : row nowrap;
+    justify-content : space-between;
+    width           : 100%;
+    padding         : 14px 0;
+}
+
+%icon-with-text__item_left {
+    margin-right: 16px;
+}
+%icon-with-text__item_main  {
+    flex-grow   : 1;
+}
+%icon-with-text__item_right {
+    text-align  : right;
+    margin-left : 16px;
+    min-width   : 80px;    
+}
+
+/*-----------------------------------------------------
+UNDERLINE
+-----------------------------------------------------*/
+/*--Underline--*/
+%line_bottom {
+	border-bottom   : solid 1px rgba(0, 0, 0, 0.12);
+}

@@ -1,0 +1,249 @@
+
+////////////////////////////////////////////////////
+// UTILITY
+////////////////////////////////////////////////////
+
+//Mixin | prefix
+@mixin prefix($property, $value, $vendors: webkit moz ms o) {
+    @if $vendors {
+      @each $vendor in $vendors {
+        #{"-" + $vendor + "-" + $property}: #{$value};
+      }
+    }
+    #{$property}: #{$value};
+}
+
+
+
+/*-----------------------------------------------------
+FLEXBOX - FLEX CONTAINER
+-----------------------------------------------------*/
+
+/*--Display--*/
+%disp_flex {
+  @include prefix(display, flex, webkit moz ms);
+}
+
+/*--Flex direction--*/
+%flex-direction_row {
+  @include prefix(flex-direction, row, webkit moz ms);
+}
+
+%flex-direction_row-reverse {
+  @include prefix(flex-direction, row-reverse, webkit moz ms);
+}
+
+%flex-direction_column {
+  @include prefix(flex-direction, column, webkit moz ms);
+}
+
+%flex-direction_column-reverse {
+  @include prefix(flex-direction, column-reverse, webkit moz ms);
+}
+
+/*--Flex wrap--*/
+%flex-wrap_no-wrap {
+  @include prefix(flex-wrap, no-wrap, webkit moz ms);
+}
+
+%flex-wrap_wrap {
+  @include prefix(flex-wrap, wrap, webkit moz ms);
+}
+
+%flex-wrap_wrap-reverse {
+  @include prefix(flex-wrap, wrap-reverse, webkit moz ms);
+}
+
+/*--Justify content--*/
+%justify-content_flex-start {
+  @include prefix(justify-content, flex-start, webkit moz ms);
+}
+
+%justify-content_flex-end {
+  @include prefix(justify-content, flex-end, webkit moz ms);
+}
+
+%justify-content_center {
+  @include prefix(justify-content, center, webkit moz ms);
+}
+
+%justify-content_space-between {
+  @include prefix(justify-content, space-between, webkit moz ms);
+}
+
+%justify-content_space-around {
+  @include prefix(justify-content, space-around, webkit moz ms);
+}
+
+%justify-content_space-evenly {
+  @include prefix(justify-content, space-evenly, webkit moz ms);
+}
+
+/*--Align items--*/
+%align-items_flex-start {
+  @include prefix(align-items, flex-start, webkit moz ms);
+}
+
+%align-items_flex-end {
+  @include prefix(align-items, flex-end, webkit moz ms);
+}
+
+%align-items_center {
+  @include prefix(align-items, center, webkit moz ms);
+}
+
+%align-items_baseline {
+  @include prefix(align-items, baseline, webkit moz ms);
+}
+
+%align-items_stretch {
+  @include prefix(align-items, stretch, webkit moz ms);
+}
+
+/*--Align content--*/
+%align-content_flex-start {
+  @include prefix(align-content, flex-start, webkit moz ms);
+}
+
+%align-content_flex-end {
+  @include prefix(align-content, flex-end, webkit moz ms);
+}
+
+%align-content_center {
+  @include prefix(align-content, center, webkit moz ms);
+}
+
+%align-content_space-between {
+  @include prefix(align-content, space-between, webkit moz ms);
+}
+
+%align-content_space-around {
+  @include prefix(align-content, space-around, webkit moz ms);
+}
+
+%align-content_stretch {
+  @include prefix(align-content, stretch, webkit moz ms);
+}
+
+
+
+/*-----------------------------------------------------
+FLEXBOX - FLEX ITEMS
+-----------------------------------------------------*/
+
+/*--Align self--*/
+%align-self_auto {
+  @include prefix(align-self, auto, webkit moz ms);
+}
+
+%align-self_flex-start {
+  @include prefix(align-self, flex-start, webkit moz ms);
+}
+
+%align-self_flex-end {
+  @include prefix(align-self, flex-end, webkit moz ms);
+}
+
+%align-self_center {
+  @include prefix(align-self, center, webkit moz ms);
+}
+
+%align-self_baseline {
+  @include prefix(align-self, baseline, webkit moz ms);
+}
+
+%align-self_stretch {
+  @include prefix(align-self, stretch, webkit moz ms);
+}
+
+
+
+////////////////////////////////////////////////////
+// FLEXBOX MIXIN - FLEX CONTAINER
+////////////////////////////////////////////////////
+
+//flex-direction
+@mixin flex-direction($direction) {
+  @if not index((row, row-reverse, column, column-reverse), $direction) {
+      @warn "Input value should be 'row', 'row-reverse', 'column', 'column-reverse'.";
+  }
+  @extend %flex-direction_#{$direction};
+}
+
+//flex-wrap
+@mixin flex-wrap($wrap) {
+  @if not index((no-wrap, wrap, wrap-reverse), $wrap) {
+      @warn "Input value should be 'no-wrap', 'wrap', 'wrap-reverse'.";
+  }
+  @extend %flex-wrap_#{$wrap};
+}
+
+//flex-flow
+@mixin flex-flow($direction, $wrap) {
+  @include flex-direction($direction);
+  @include flex-wrap($wrap);
+}
+
+//justify-content
+@mixin justify-content($justify) {
+  @if not index((flex-start, flex-end, center, space-between, space-around, space-evenly), $justify) {
+      @warn "Input value should be 'flex-start', 'flex-end', 'center', 'space-between', 'space-around'.";
+  }
+  @extend %justify-content_#{$justify};
+}
+
+//align-items
+@mixin align-items($align) {
+  @if not index((flex-start, flex-end, center, baseline, stretch), $align) {
+      @warn "Input value should be 'flex-start', 'flex-end', 'center', 'baseline', 'stretch'.";
+  }
+  @extend %align-items_#{$align};
+}
+
+//align-content
+@mixin align-content($align) {
+  @if not index((flex-start, flex-end, center, space-between, space-around, stretch), $align) {
+      @warn "Input value should be 'flex-start', 'flex-end', 'center', 'baseline', 'stretch'.";
+  }
+  @extend %align-content_#{$align};
+}
+
+
+
+////////////////////////////////////////////////////
+// FLEXBOX MIXIN - FLEX ITEMS
+////////////////////////////////////////////////////
+
+//flex-order
+@mixin flex-order($order: 0) {
+  @include prefix(flex-order, $order, webkit moz ms);
+}
+
+//flex-grow
+@mixin flex-grow($grow: 0) {
+  @include prefix(flex-grow, $grow, webkit moz ms);
+}
+
+//flex-shrink
+@mixin flex-shrink($shrink: 0) {
+  @include prefix(flex-shrink, $shrink, webkit moz ms);
+}
+
+//flex-basis
+@mixin flex-basis($basis: auto) {
+  @include prefix(flex-basis, $basis, webkit moz ms);
+}
+
+//flex
+@mixin flex($grow, $shrink: null, $basis: null) {
+  @include prefix(flex, $grow $shrink $basis, webkit moz ms);
+}
+
+//align-self
+@mixin align-self($align) {
+  @if not index((auto, flex-start, flex-end, center, baseline, stretch), $align) {
+      @warn "Input value should be 'auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch'.";
+  }
+  @extend %align-self_#{$align};
+}
+

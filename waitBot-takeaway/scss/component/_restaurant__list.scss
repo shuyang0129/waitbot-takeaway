@@ -1,0 +1,54 @@
+/*-----------------------------------------------------
+RESTAURANT LIST
+-----------------------------------------------------*/
+/*--Restaurant List--*/
+.search {
+    margin-top: 113px;
+}
+
+.restaurant__item_group {
+    @extend %icon-with-text__group;
+    @extend %cursor__pointer;
+    @extend %line_bottom;
+    position: relative;
+}
+
+.restaurant__item_main {
+    @extend %icon-with-text__item_main;
+}
+
+.restaurant__item_description {
+    margin-top  : 8px;
+}
+
+.restaurant__item_action {
+    @extend %icon-with-text__item_right;
+    color       : $color__icon_default;
+}
+
+.action__menu {
+    display          : none;
+    position         : absolute;
+    max-width        : 112px;
+    padding          : 8px 0px;
+    right            : 0;
+    top              : 12px;
+    background-color : #FFFFFF;
+    border           : solid 1px rgba(0, 0, 0, 0.12);
+    z-index          : 3;
+    border-radius    : 2px;
+    
+}
+
+.action__menu_item {
+    width    : 100%;
+    height   : 48px;
+    overflow : hidden;
+    padding  : 0px 16px;
+    cursor   : pointer;
+    transition: background-color .2s ease-in;
+
+    &:hover {
+        background-color : #FAFAFA;
+    }
+}
