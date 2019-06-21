@@ -24,5 +24,8 @@ Because the project in this stage only designed for mobile used, work with messe
 - [Shopping Cart Page](http://waitbot-demo.surge.sh/shopping-cart.html)  
   
 ## More WaitBot
-WaitBot Takeaway project is a subporject of WaitBot, which is a restaurant ordering system that serve in the restaurant. It provides universal template to help restaurant owners who want to have their own ordering system by customizing the template.  
-[visit the project article on Behance](https://www.behance.net/gallery/81849791/WaitBot-Restaurant-ordering-system)
+WaitBot Takeaway project is a subporject of WaitBot, which is a restaurant ordering system that serve in the restaurant. It provides universal template to help restaurant owners who want to have their own ordering system by customizing the template. 
+
+[WaitBot on Behance](https://www.behance.net/gallery/81849791/WaitBot-Restaurant-ordering-system)
+
+
